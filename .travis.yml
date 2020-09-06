@@ -15,6 +15,7 @@ before_install:
   - gcloud config set compute/zone us-central1-c
   - gcloud container clusters get-credentials multi-k8-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  #build test version of multi client image and then our tests inside it
   - docker build -t jyotijaiswal88/react-test -f ./client/Dockerfile.dev ./client
 
 script:
