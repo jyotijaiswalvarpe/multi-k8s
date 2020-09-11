@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: jpjnearme.info-tls
+spec:
+  secretName: jpjnearme.info
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: jpjnearme.info
+  dnsNames:
+    - 
+    - 
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - jpjnearme.info
+          - www.jpjnearme.info
