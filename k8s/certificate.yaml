@@ -9,8 +9,8 @@ spec:
     kind: ClusterIssuer
   commonName: jpjnearme.info
   dnsNames:
-    - 
-    - 
+    - jpjnearme.info
+    - www.jpjnearme.info
   acme:
     config:
       - http01:
